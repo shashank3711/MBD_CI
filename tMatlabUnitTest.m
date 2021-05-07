@@ -23,7 +23,7 @@ classdef tMatlabUnitTest<matlab.unittest.TestCase
            open_system(model)
            testCase.addTeardown(@()close_system(model,0));
            simOut=sim(model,'ReturnWorkspaceOutputs', 'on');
-           testCase.verifyEqual(simOut.yout1.signals.values,zeros(51,1))
+           testCase.verifyEqual(simOut.yout1.signals.values,ones(51,1))
        end
        
        function checkSimulationOutputFor_mIntegratedModel(testCase)
