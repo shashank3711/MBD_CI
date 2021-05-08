@@ -26,13 +26,10 @@ try
     runner.addPlugin(matlab.unittest.plugins.TAPPlugin.producingOriginalFormat(stream))
     
     result=runner.run(fileSuite);
-    
-    for iloop=1:length(result)
-        disp(result(iloop))
-    end
-    exit(any([result.failed]))
+    disp(result);
+    exit;
 catch ME
     disp('Error while executing main script')
     getReport(ME)
-    exit(1)
+    exit;
 end
