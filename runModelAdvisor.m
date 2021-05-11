@@ -81,3 +81,4 @@ iso26262Checks={'mathworks.iec61508.MdlMetricsInfo'                 ...
     'ieccertkits.bugreport.HDL_Coder'                   };
 
 checkResults=ModelAdvisor.run(modelsToRun,iso26262Checks,'DisplayResults','Details','Force','on');
+ModelAdvisor.summaryReport(checkResults);
