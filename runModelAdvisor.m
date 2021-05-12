@@ -80,5 +80,5 @@ iso26262Checks={'mathworks.iec61508.MdlMetricsInfo'                 ...
     'ieccertkits.bugreport.AUTOSAR_Blockset'            ...
     'ieccertkits.bugreport.HDL_Coder'                   };
 
-checkResults=ModelAdvisor.run(modelsToRun,iso26262Checks,'DisplayResults','Details','Force','on');
+checkResults=ModelAdvisor.run(modelsToRun,iso26262Checks,'DisplayResults','Details','Force','on','ParallelMode','on');
 ModelAdvisor.summaryReport(checkResults);
